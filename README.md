@@ -11,9 +11,13 @@ There is no database, login or RSVP form, by design.
 
 ## 1. Run it on your laptop
 
-1. Install **Node.js (LTS)** from https://nodejs.org (one time). Nothing else to install.
-2. **Windows:** double-click **`start.bat`**
+1. **Windows:** double-click **`start.bat`**
    **Mac / Linux:** run `./start.sh` in a terminal
+
+That is all. If Node.js (the one thing the site needs) is missing, the launcher installs it
+for you (Windows: click **Yes** if asked for permission), then opens the invitation in your
+browser and starts the site. If automatic install is not possible on your PC, it tells you to
+install "LTS" from https://nodejs.org and double-click the file again.
 
 A window opens and prints your links:
 
@@ -43,19 +47,22 @@ close the window or turn off the laptop, and free links change each time.
 The site is plain static files and already includes a `vercel.json`, so no settings are needed.
 Everything works there, including the countdown and the calendar download.
 
-*Option A, from your laptop (about 2 minutes):*
+*Option A, one click (Windows):*
+Double-click **`deploy-vercel.bat`**. It opens a Vercel sign-in page (a free account is fine),
+then publishes the site and prints your live link, like `https://obaid-samra-wedding.vercel.app`.
+
+*Option A, by hand (any computer):*
 1. Open a terminal in this project folder (the one containing `vercel.json`).
-2. Run `npx vercel login` and sign in (a free Vercel account is fine).
-3. Run `npx vercel --prod`. Press Enter to accept the defaults
-   (set up and deploy: Yes, project name: e.g. `obaid-samra-wedding`, code directory: `./`).
-4. It prints your live link, like `https://obaid-samra-wedding.vercel.app`.
+2. Run `npx vercel login` and sign in.
+3. Run `npx vercel --prod --scope shahzaib-cfeb` and press Enter to accept the defaults. If it complains about the
+   project name, use lowercase letters only, e.g. `obaid-samra-wedding`.
 
 *Option B, through GitHub:*
 1. Upload this folder to a new GitHub repository.
 2. On https://vercel.com/new choose **Import** for that repository, leave every setting as it is, and click **Deploy**.
 
 *After editing `public/js/config.js`* (for example, once the Mehndi time and venue are confirmed),
-run `npx vercel --prod` again (Option A), or push the change to GitHub (Option B). The live link stays the same.
+run `deploy-vercel.bat` again (or `npx vercel --prod --scope shahzaib-cfeb`), or push the change to GitHub (Option B). The live link stays the same.
 
 Other free hosts work too (Netlify Drop, Cloudflare Pages, GitHub Pages): upload the **`public`** folder.
 
@@ -101,6 +108,7 @@ Runs 11 checks on dates, weekdays, countdown behaviour, timezone safety and the 
 ## Project layout
 
 ```
+deploy-vercel.bat      one-click publish to Vercel (Windows)
 vercel.json            deploy settings for Vercel (serves the public folder)
 server.js              tiny local web server (no dependencies)
 start.bat / start.sh   one-click launchers
