@@ -154,8 +154,8 @@ img, svg { display: block; max-width: 100%; }
 }
 
 .hero__bismillah {
-  font-family: var(--serif); font-style: italic; font-size: clamp(.95rem, 3.2vw, 1.15rem);
-  letter-spacing: .06em; color: var(--olive-deep);
+  font-family: 'Amiri', serif; font-style: normal; font-size: 1.7rem; line-height: 1.5;
+  letter-spacing: 0; color: var(--olive-deep);
 }
 .hero__lead {
   margin-top: clamp(1rem, 3vh, 1.8rem);

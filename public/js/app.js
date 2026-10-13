@@ -59,7 +59,7 @@
     return h('section', { class: 'hero', id: 'top', 'aria-labelledby': 'couple-names' }, corners.concat([
       art('arch', 'hero__arch', '0 -10 320 480'),
       h('div', { class: 'hero__inner' }, [
-        h('p', { class: 'hero__bismillah fade fade-1', text: C.hero.bismillah }),
+        h('p', { class: 'hero__bismillah fade fade-1', lang: 'ar', dir: 'rtl', text: C.hero.bismillah }),
         h('p', { class: 'hero__lead fade fade-2', text: C.hero.lead }),
         h('h1', { class: 'names fade fade-3', id: 'couple-names' }, [
           h('span', { class: 'names__name', text: C.couple.groom }),

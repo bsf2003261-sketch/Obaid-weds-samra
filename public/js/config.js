@@ -44,7 +44,7 @@
     dateRangeCompact: '29–31 October 2026',
 
     hero: {
-      bismillah: 'Bismillah-ir-Rahman-ir-Raheem',
+      bismillah: 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ',
       lead: 'Together with their families',
       sub: 'Joyfully invite you to celebrate their wedding'
     },
